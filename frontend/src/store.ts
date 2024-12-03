@@ -16,7 +16,7 @@ interface Store {
 	clearOrder: () => void;
 }
 
-const initialState: Store = {
+const initialState = {
 	total: 0,
 	discount: 0,
 	contents: [],
@@ -25,7 +25,14 @@ const initialState: Store = {
 		message: '',
 		porcentaje: 0,
 	},
-};
+	addToCart: () => {},
+	updateQuantity: () => {},
+	removeFromCart: () => {},
+	calculateTotal: () => {},
+	applyCoupon: async () => {},
+	applyDiscount: () => {},
+	clearOrder: () => {},
+} as Store;
 
 export const useStore = create<Store>()(
 	devtools((set, get) => ({
